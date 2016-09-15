@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+<CUSTOMER ident="I" idnumber="0156782" creditnumber="my76" telephone="0537735548" address="tel aviv, sderot hen 4" email="aa@gmail.com"></CUSTOMER>
+<AUTO autono="12asw31"></AUTO>
+<CONTRACT customer="I0156782" auto="12asw31" holiday="yes" type="weekly" period="0" start="2-08-2015" start_hour="10" end_hour="23"></CONTRACT>
+<AUTO autono="qw3456"></AUTO>
+<CONTRACT customer="I0156782" auto="qw3456" holiday="no" type="daylist" period="1,3,5" start="2-08-2015" start_hour="0" end_hour="24"></CONTRACT>
+<AUTO autono="mine1"></AUTO>
+<CONTRACT customer="I0156782" auto="mine1" holiday="no" type="none" period="0" start="future" start_hour="0" end_hour="24"></CONTRACT>
+<CUSTOMER ident="P" idnumber="345re43" creditnumber="as45qw234" telephone="039246864" address="jerusalem" email="bb@gmail.com"></CUSTOMER>
+<AUTO autono="12asw31"></AUTO>
+<CONTRACT customer="P345re43" auto="12asw31" holiday="no" type="none" period="0" start="future" start_hour="0" end_hour="24"></CONTRACT>
+<CUSTOMER ident="I" idnumber="1111" creditnumber="78787" telephone="43434" address="gfgfgf"></CUSTOMER>
+<AUTO autono="minor77"></AUTO>
+<CONTRACT customer="I1111" auto="minor77" holiday="no" type="none" period="0" start="future" start_hour="0" end_hour="24"></CONTRACT>
+<CUSTOMER ident="I" idnumber="i88888" creditnumber="23211232" telephone="565655" address="pppp" email="eeee"></CUSTOMER>
+<AUTO autono="kukuky"></AUTO>
+<CONTRACT customer="Ii88888" auto="kukuky" holiday="no" type="none" period="0" start="future" start_hour="0" end_hour="24"></CONTRACT>
+<CUSTOMER ident="P" idnumber="1212121212" creditnumber="89igt78" telephone="421345" address="gfgf"></CUSTOMER>
+<AUTO autono="kukuk9999"></AUTO>
+<CONTRACT customer="P1212121212" auto="kukuk9999" holiday="no" type="none" period="0" start="future" start_hour="0" end_hour="24"></CONTRACT>
+<CUSTOMER ident="I" idnumber="2345" creditnumber="666" telephone="333" address="ccc" email="vvv"></CUSTOMER>
+</data>

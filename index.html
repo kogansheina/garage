@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>Parking</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <style>
+    table, th, td 
+    {
+        border: 1px solid black;
+    }
+    .inptd
+    {
+        color: black;
+        width: 800px;
+    }
+    </style>
+</head>
+<body>    
+<script type="text/javascript" src="./js/parking.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript" src="./js/registration.js"></script>
+<h2 id="data"></h2>
+<h2>MENU</h2>
+<ul>
+  <li>Registration</li>
+    <ul>
+        <!-- sub-menu for management of a customer -->
+        <li><a href="#" onclick="{return Customer.registerCustomer();}">Add customer</a></li>
+        <li><a href="#addauto" onclick="document.getElementById('auto').style.display = 'block';">Add auto to customer</a></li>
+        <li><a href="#delete" onclick="document.getElementById('del').style.display = 'block';">Delete customer</a></li>
+        <li><a href="#change" onclick="document.getElementById('chg').style.display = 'block';">Change customer</a></li>
+    </ul>
+  <!-- sub-menu list customers - according to any criteria or all -->
+  <li>Query</li>
+    <ul>
+        <!-- sub-menu for management of a customer -->
+        <li><a href="#" onClick=Customer.listCustomer(true,'all',true);>List All Full Information</a></li>
+        <li><a href="#listc"  onclick="document.getElementById('listformc').style.display = 'block';">List Full Information By Criteria</a></li>
+        <li><a href="#" onclick=Customer.listCustomer(true,'c+a',true); >List All Customer and Auto</a></li>
+        <li><a href="#" onclick=Customer.listCustomer(true,'i+a+c',true); >List All ID and Auto and Contract</a></li>
+    </ul>
+  <li><a href="http://localhost/xampp/garage/php/files.php?action=load">Load</a></li>
+  <li><a href="http://localhost/xampp/garage/php/files.php?action=save">Save</a></li>
+
+</ul>  
+<!-- section for adding customer -->
+<div id="reg" style="display:none">
+<a name="registration">
+<form>
+    <table id="addtbl">
+    </table><br><br>
+    <button onclick="return Customer.addCustomer(true);">Submit</button>&nbsp;&nbsp;
+    <button onclick="return Customer.addCustomer(false);">Cancel</button>
+</form>
+</a>
+</div>
+<!-- section to delete customer : internal ID of the custoner is required -->
+<div id="del" style="display:none">
+<a name="delete">
+<form>
+    <table>
+        <tr>
+        <td>Customer ID</td>
+        <td><input type="text" id="rowid"></td>
+        </tr>
+    </table><br><br>
+    <button onclick="return Customer.deleteCustomer(true);">Submit</button>&nbsp;&nbsp;
+    <button onclick="return Customer.deleteCustomer(false);">Cancel</button>
+</form>
+</a>
+</div>
+<!-- section to add an auto to customer : internal ID of the custoner is required -->
+<div id="auto" style="display:none">
+<a name="addauto">
+<form>
+    <table>
+        <tr>
+        <td>Customer ID</td>
+        <td><input type="text" id="addautoid"></td>
+        </tr>
+        <tr>
+        <td>Registration</td>
+        <td><input type="text" id="addautonr"></td>
+        </tr>
+    </table><br><br>
+    <button onclick="return Customer.addAuto(true);">Submit</button>&nbsp;&nbsp;
+    <button onclick="return Customer.addAuto(false);">Cancel</button>
+</form>
+</a>
+</div>
+<!-- section to change customer : internal ID of the custoner is required -->
+<div id="chg" style="display:none">
+<a name="change">
+<form>
+    <table>
+        <tr>
+        <td>Customer ID</td>
+        <td><input type="text" id="chgid"></td>
+        </tr>
+    </table><br><br>
+    <button onclick="return Customer.changeCustomer(true);">GetIt</button>&nbsp;&nbsp;
+    <button onclick="return Customer.changeCustomer(false);">Cancel</button>
+</form>
+</a>
+</div>
+<!-- section for change customer : the info is displayed with the permission to change any field
+ besides the internal ID -->
+<div id="chglist" style="display:none">
+<table id="chgtbl">
+</table><br><br>
+<button onclick="return Customer.doCustomer(true);">Submit</button>&nbsp;&nbsp;
+<button onclick="return Customer.doCustomer(false);">Cancel</button><br><br>
+</div>
+<div id="listformc" style="display:none">
+<a name="#listc">
+<form>
+    <table>
+        <tr>
+        <td><select id="seldc"> 
+        <option value="name" >Name</option>
+        <option value="address" >Address</option>
+        <option value="email" >E-mail</option>
+        <option value="identno" selected >Identity number</option>
+        <option value="credit" >Credit number</option>
+        <option value="auto" >Vehicle number</option>
+        </select></td>
+        <td><input type="text" id="fieldc"></td>
+        </tr>
+    </table><br><br>
+    <button onclick="return Customer.listCustomer(false,'',true);">Submit</button>&nbsp;&nbsp;
+    <button onclick="return Customer.listCustomer(false,'',false);">Cancel</button>
+</form>
+</a>
+</div>
+<script>window.onload = start();</script>
+</body>
+</html> 
